@@ -62,7 +62,7 @@ def main(parser, args):
         json_file = args.json_file
         output_file = args.output_file
 
-        with open(json_file) as transcriptFile:
+        with open(json_file, encoding="utf-8") as transcriptFile:
             transcript = json.load(transcriptFile)
 
         write_simple_transcript(transcript, output_file)

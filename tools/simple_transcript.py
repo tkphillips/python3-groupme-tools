@@ -9,7 +9,7 @@ def write_simple_transcript(messages, outputFilename):
     """Prints a readable "transcript" from the given list of messages.
 
     Assumes the input list is sorted."""
-    with open(outputFilename, 'w') as outFile:
+    with open(outputFilename, 'w', encoding="utf-8") as outFile:
         for message in messages:
             name = message[u'name']
             time = datetime.datetime.fromtimestamp(message[u'created_at']).strftime('%Y-%m-%d %H:%M')

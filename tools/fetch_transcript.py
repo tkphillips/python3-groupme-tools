@@ -39,7 +39,7 @@ def populate_transcript(output_dir, group, accessToken, transcript, beforeId, st
 
     tempFileName = f"{output_dir}/temp-transcript-{0}.json".format(group)
 
-    with open(tempFileName, 'w') as tempFile:
+    with open(tempFileName, 'w', encoding="utf-8") as tempFile:
         while not complete:
             pageCount = pageCount + 1
             if pageLimit and pageCount > pageLimit:
